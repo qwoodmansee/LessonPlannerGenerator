@@ -7,3 +7,13 @@ class Grades(Enum):
     THIRD = 3
     FOURTH = 4
     FIFTH = 5
+
+
+    def __str__(self, *args, **kwargs):
+        """
+        :param args:
+        :param kwargs:
+        :return:  returns the grade in form "[value] Grade" ex. "First Grade"
+        """
+        return self.name.title() + " Grade"
+
