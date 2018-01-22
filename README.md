@@ -1,5 +1,12 @@
+# Lesson Plan Generator
+
+Developed by qwoodmansee, currently in very early stages.
+
+## Summary
 Tool to generate lesson plans based on a variety of inputs
 
+
+### Basic Instructions
 To export lesson plans, a valid instance of the LessonPlan class must be
 created. An crude example can be seen in the Test/TestLessonPlan.py
 file.
@@ -9,8 +16,10 @@ be created. A template is a .docx file which uses {{}} syntax to relay
 variables to the code, which code fills in using strings stored in the
 LessonPlan instance.
 
-Templates can be created using the following strategy:
+#### Templates can be created using the following strategy:
+    
     - Open a word doc with an existing lesson plan, or create one.
+    
     - Any variables which are included in the Lesson Plan can be replaced
         in your word document. For example, a list of materials can be
         replaced with the tag {{ MATERIALS}}
@@ -22,7 +31,8 @@ Templates can be created using the following strategy:
         - Change the tag in your Word Document to {{r MATERIALS}}
             - note the addition of the "r"
 
-Lesson Plan Writers can be written by doing the following:
+#### Lesson Plan Writers can be written by doing the following:
+
     - Create a valid implementation of the LessonPlanWriter base class
     - Use the doxctpl library to read in the template.docx file from above
     - Create a context Dictionary which maps each variable in the
@@ -33,6 +43,7 @@ Lesson Plan Writers can be written by doing the following:
             name of the style created by the document creator
 
 
-Gotcha's:
+#### Gotcha's:
+
     - When creating styles, if the user accidentally creates a "Paragraph
         Style", it won't be applied correctly when using the "style=" tag.
